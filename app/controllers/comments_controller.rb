@@ -16,9 +16,12 @@ end
 # PATCH /comments/:id
 def update
   # byebug
-  comment = find_comment
-  comment.update!(comment_params)
-  render json: comment, status: :ok
+  if comment[:user_id] == session[:user_id]
+    comment.update!(comment_params)
+    render json: comment, status: :ok
+  else
+    render json: { error: "Not allowed to update" }, status: :unprocessable_entity
+  end
 end
 
 # POST /comments
@@ -27,10 +30,14 @@ def create
   render json: new_comment, status: :created
 end
 
+# DELETE /comment/:id
 def destroy
-  comment = find_comment
-  comment.destroy
-  head :no_content
+  if comment[:user_id] == session[:user_id]
+    comment.destroy
+    head :no_content
+  else
+    render json: { error: "Not allowed to delete" }, status: :unprocessable_entity
+  end 
 end
 
 

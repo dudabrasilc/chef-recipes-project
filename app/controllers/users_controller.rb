@@ -13,7 +13,8 @@ class UsersController < ApplicationController
   # GET '/me'
   # ???
   def show
-      render json: @current_user
+      user = User.find(id: session[:user_id])
+      render json: user
   end
 
 

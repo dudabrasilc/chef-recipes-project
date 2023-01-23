@@ -33,11 +33,13 @@ export default function RecipeItem({ recipe, handleUpdateItem, handleFindVideoDa
         <h2 className="recipe-card-title">{title}</h2>
         <img src={image} className="recipeimage" alt="recipe"/>
         <p></p>
-        <button onClick={handleClick} className="like-btn">{isFavorited ? "♥" : "♡"}</button>
+        {/* <button onClick={handleClick} className="like-btn">{isFavorited ? "♥" : "♡"}</button> */}
         <h4 className="recipe-card-category">{category}</h4>
         <p className="recipe-card-description">{summary}...</p>
       </div>
-      <Link exact to={`/video/${id}`}><i className="gg-play-button-o"></i></Link>
+      <Link exact to={`/video/${id}`} className="play-recipe">
+        <p className="play-recipe">▶</p>
+      </Link>
     </div>
   );
 }

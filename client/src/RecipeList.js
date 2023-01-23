@@ -35,8 +35,8 @@ export default function RecipeList({ recipeData,  setRecipeData, clicked, setCli
   return (
     <>
     <div className="comment-page-title">
-      <h3>A community for chefs from all around the world.</h3>
-      <h5>Share recipes, build your own recipes selection and leave your feedback.</h5>
+      <h3 className="recipe-list-header">Our signature recipe selection, in the comfort of your home.</h3>
+      <h5>Share recipes, browse and leave your feedback!</h5>
     </div>
     <div className="comment-page-intro">
       <p></p>

@@ -53,7 +53,8 @@ export default function CommentItem({ id, commentRecipe, comment, handleDeleteCo
             </Link>
             <p>{description.substring(0,25)}...</p>
            <p className="username">- {user.username}</p>
-           <Link className="full-comment-button" to={`/comments/${id}`}>Full Comment</Link></h3>
+           <Link className="full-comment-button" to={`/comments/${id}`}>Full Comment</Link>
+           </h3>
         </div>
        )
       }

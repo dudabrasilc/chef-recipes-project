@@ -18,10 +18,10 @@
 .login-form{
   background-image: url("https://www.foodandwine.com/thmb/-3tHq2yF0RW_iakq8wmXTvLw3AY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/The-Fine-Art-of-Navigating-a-Tasting-Menu-FT-BLOG0622-71bffdfca81c4a91aae0cce785ab6758.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
-  margin-bottom: 100px;
+  background-size: 120%;
+  /* margin-bottom: -100px; */
   padding: 100px;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 }
 
 .tagline {
@@ -29,7 +29,7 @@
   margin-bottom: 50px;
   text-align: center;
   font-size: 25px;
-  font-weight: 200;
+  object-fit: cover;
 }
 
 .gg-play-button-o {
@@ -445,6 +445,13 @@
   color: #5e1503;
 } */
 
+#img-comment {
+  height: 120px;
+  width: 140px;
+  border-radius: 8px;
+  
+}
+
 .like-btn {
   background-color: #f8d0ca;
   color: #5e1203;
@@ -460,7 +467,12 @@
   text-shadow: 1px 1px 0px white;
   border-radius: 15px;
   padding: 15px;
+  padding-bottom: 0px;
   text-align: center;
+  height: 320px;
+  width: 400px;
+  box-shadow: 5px 5px #e48148;
+  transition: .7s;
 }
 
 .bubble {
@@ -480,10 +492,26 @@
   text-shadow: 0px 0px 5px #d86800;
 }
 .comments-div {
-  margin-bottom: 0 auto;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 800px;
+    align-content: center;
+    display: grid;
+    margin: 0 auto;
+    max-height: 25rem;
+    grid-template-columns: auto auto auto;
+    gap: 9% 5%;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    min-width: 1rem;
+  /* margin-bottom: 0 auto;
   margin-top: 50px;
   margin-right: 20%;
-  margin-left: 20%;
+  margin-left: 20%; */
 }
 
 .delete-button{
@@ -582,7 +610,7 @@
   justify-content: center;
   text-align: center;
   margin-top: 30px;
-  color:#edfafd;
+  color: #edfafd;
   border-radius: 50px;
   border: none;
   font-size: 20px;
@@ -635,7 +663,7 @@
 }
 
 .show-comment{
-  color: #0077b6;
+  color: #520C00;
   text-align: center;
   align-self: center;
   justify-content: center;
@@ -647,7 +675,7 @@
   font-size: 25px;
   padding: 15px;
   font-weight: bolder;
-  letter-spacing: 10px;
+  letter-spacing: 2px;
 }
 
 /* NEW RECIPE FORM */
@@ -758,4 +786,60 @@
   padding: 6px 16px;
   position: relative;
   transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+}
+
+.select-recipe {
+  color: #6F6F6F;
+}
+
+
+/* dropdown select */
+
+.select-dropdown,
+.select-dropdown * {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	box-sizing: border-box;
+  text-shadow: 1px 1px 0px #ffffff;
+  border-radius: 15px;
+  border: none;
+}
+.select-dropdown {
+	position: relative;
+	background-color: rgb(255, 214, 194);
+	/* border-radius: 8px transparent; */
+  border: none;
+  border-radius: 8px;
+  /* width: 40px; */
+  height: 40px;
+  font-size: 15px;
+  color: #6F6F6F;
+}
+.select-dropdown select {
+	font-size: 1rem;
+	font-weight: normal;
+	max-width: 100%;
+	padding: 8px 24px 8px 10px;
+	border: none;
+	background-color: transparent;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	appearance: none;
+}
+.select-dropdown select:active, .select-dropdown select:focus {
+	outline: none;
+	box-shadow: none;
+}
+.select-dropdown:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	width: 0;
+	height: 0;
+	margin-top: -2px;
+	border-top: 5px solid #aaa;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
 }

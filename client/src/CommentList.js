@@ -10,6 +10,7 @@ function CommentList({ user, recipeData }) {
       user_id: user.id,
       recipe_id: 0
     })
+    const [canSubmit, setCanSubmit] = useState(true)
 
     console.log(user)
     console.log(formData)
@@ -68,15 +69,21 @@ function CommentList({ user, recipeData }) {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newCommentObj)
               })
-              .then(response => response.json())
-              .then((data) => addNewComment(data))  
-              setFormData({
-                description: "",
-                user_id: user.id,
-                recipe_id: 0
-              });   
-              console.log(newCommentObj);
-      }
+              .then(response => {
+                if (response.ok) {
+                  response.json().then((data) => {
+                  addNewComment(data)  
+                  setFormData({
+                  description: "",
+                  user_id: user.id,
+                  recipe_id: 0
+                  })
+                  setCanSubmit(true)
+                })
+                } else {
+                  setCanSubmit(false)
+                  }}
+                )}
     
       const commentList = commentData
       .map((comment) =>
@@ -97,56 +104,43 @@ function CommentList({ user, recipeData }) {
         [e.target.name]: e.target.type === 'number' ? parseInt(e.target.value) : e.target.value
       });
     }
+    
+    if (!recipeData) {
+      return "Loading.."
+    } else {
 
-    // console.log(formData)
-
-    // function handleClickMore() {
-    //     setDataIndex((dataIndex) => (dataIndex + 3) % commentData.length);
-    //   }
-
-    // function handleClickLess() {
-    //   setDataIndex((dataIndex) => (dataIndex - 3) % commentData.length);
-    // }
-
-  return (
-    <>
-    <div className="comment-page-title">
-    <p>Comments</p>
-    </div>
-    <div className="comment-page">
-    <p> Share your experience on making this special selection of recipes!<br/><br/></p>
-    </div>
-    <form className="create-comment" onSubmit={handleSubmit} >
-      <label className="comment-label" htmlFor="comment">New Comment: </label>
-      <input 
-        className="comment-input"
-        name="description"
-        type="text"
-        placeholder="Enter a comment..."
-        value={formData.description}
-        onChange={handleChange}
-        ></input>
-        <select value={formData.recipe_id} name="recipe_id" onChange={handleChange}>
-          <option value="none">Select recipe</option>
-          {titles}
-        </select>
-        <input className="submit-button" type="submit" value="Post" />
-    </form>
-    <div className="comments-div">{commentList}</div>
-    <div className="float-container">
-          {/* <div className="next-container">
-                <button 
-                className="back-button" 
-                onClick={handleClickLess}><i className="gg-chevron-left"></i></button>
-          </div>
-          <div className="next-container">
-              <button 
-                className="next-button" 
-                onClick={handleClickMore}><i className="gg-chevron-right"></i></button>
-  </div> */ }
-    </div>
-    </>
-  )
-}
-
+      return (
+        <>
+        <div className="comment-page-title">
+        <p>Comments</p>
+        </div>
+        <div className="comment-page">
+        <p> Share your experience on making this special selection of recipes!<br/><br/></p>
+        </div>
+        <form className="create-comment" onSubmit={handleSubmit} >
+          <label className="comment-label" htmlFor="comment">New Comment: </label>
+          <input 
+            className="comment-input"
+            name="description"
+            type="text"
+            placeholder="Enter a comment..."
+            value={formData.description}
+            onChange={handleChange}
+            ></input>
+            <select value={formData.recipe_id} name="recipe_id" className="select-dropdown" onChange={handleChange}>
+              <option value="none">Select recipe</option>
+              {titles}
+            </select>
+            <p></p>
+            <div className="select-recipe">{ canSubmit ? "" : "Please select a recipe"}</div>
+            <input className="submit-button" type="submit" value="Post" />
+        </form>
+        <div className="comments-div">{commentList}</div>
+        <div className="float-container">
+        </div>
+        </>
+      )
+    }
+  }
+ 
 export default CommentList;

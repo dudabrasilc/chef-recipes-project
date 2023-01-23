@@ -9,18 +9,21 @@ export default function RecipeList({ recipeData,  setRecipeData, clicked, setCli
   // const recipeItems = [...recipeData]
   //   .slice(dataIndex, dataIndex + 3)
 
-  const recipeItems = recipeData
-    .map((recipe) => 
-    <RecipeItem 
-      key={recipe.id}
-      recipe={recipe}
-      handleUpdateItem={handleUpdateItem}
-      clicked={clicked}
-      setClicked={setClicked}
-      handleFindVideoData={handleFindVideoData}
-      handleFindId={handleFindId}
-    />
-  )
+  // if (!recipeData) {
+  //   return "Loading"
+  // } else {
+  //   const recipeItems = recipeData
+  //   .map((recipe) => 
+  //   <RecipeItem 
+  //     key={recipe.id}
+  //     recipe={recipe}
+  //     handleUpdateItem={handleUpdateItem}
+  //     clicked={clicked}
+  //     setClicked={setClicked}
+  //     handleFindVideoData={handleFindVideoData}
+  //     handleFindId={handleFindId}
+  //   />
+  // )
 
   // function handleClickMore() {
   //   setDataIndex((dataIndex) => (dataIndex + 3) % recipeData.length);
@@ -39,7 +42,17 @@ export default function RecipeList({ recipeData,  setRecipeData, clicked, setCli
       <p></p>
     </div>
     <div className="recipe-list">
-      <div className="recipe-container">{recipeItems}</div>
+      <div className="recipe-container">{recipeData
+    .map((recipe) => 
+    <RecipeItem 
+      key={recipe.id}
+      recipe={recipe}
+      handleUpdateItem={handleUpdateItem}
+      clicked={clicked}
+      setClicked={setClicked}
+      handleFindVideoData={handleFindVideoData}
+      handleFindId={handleFindId}
+    />)}</div>
       {/* <div className="float-container">
           <div className="next-container">
                 <button 

@@ -51,7 +51,7 @@ export default function CommentItem({ id, commentRecipe, comment, handleDeleteCo
             <Link to={`/video/${id}`}>
               <img id="img-comment" src={commentRecipe.image}></img>
             </Link>
-            <p>{description}</p>
+            <p>{description.substring(0,25)}...</p>
            <p className="username">- {user.username}</p>
            <Link className="full-comment-button" to={`/comments/${id}`}>Full Comment</Link></h3>
         </div>

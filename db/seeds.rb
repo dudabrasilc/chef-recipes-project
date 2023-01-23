@@ -6,8 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-# user seeds
+# puts "👩👨 Seeding users..."
 
 user1 = User.create(username: 'Maria', password: 'dog')
 user2 = User.create(username: 'John', password: 'cat')
@@ -18,8 +17,6 @@ user6 = User.create(username: 'Ashley', password: 'banana')
 user7 = User.create(username: 'Patricia', password: 'beans')
 user8 = User.create(username: 'Jeremy', password: 'party')
 
-
-# recipe seeds
 
 puts "🥘🍝 Seeding recipes..."
 
@@ -41,8 +38,6 @@ recipe8 = Recipe.create(title: "Dal Makhani", image: "https://i.pinimg.com/564x/
 
 recipe9 = Recipe.create(title: "Cacio e Pepe", image: "https://i.pinimg.com/564x/76/3e/8c/763e8ce4f4173df1d94a521fc02b30ce.jpg", chef: "Simone Zanoni", description: "Michelin starred chef behind the Le George restaurant at the Four Seasons Hotel Geroge V in Paris, Simone Zanoni cooks his recipe for the very best cacio e pepe spaghetti, exclusively for Vogue Paris. Follow this Italian classic at home, step by step. .", is_favorited: "false", video: "https://www.youtube.com/embed/5E8AD5gJUgc")
 
-
-# comment seeds
 
 puts "✍🏻🗒️ Seeding comments..."
 
@@ -67,5 +62,6 @@ comment9 = Comment.create(description: "OMGGGG this is so good!", user_id: 5, re
 comment10 = Comment.create(description: "I could make this everyday.. it's delicious!!", user_id: 5, recipe_id: recipe3.id)
 
 comment11 = Comment.create(description: "This chef has so much talent, I hope i can make it to look as good as his! haha", user_id: 6, recipe_id: recipe2.id)
+
 
 puts "✅ Done seeding!"

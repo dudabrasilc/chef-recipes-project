@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     end
 
     # GET '/me'
-    # ???
+    # OK
     def show
         render json: @current_user
     end

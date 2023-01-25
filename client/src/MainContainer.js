@@ -6,7 +6,7 @@ import CommentList from "./CommentList";
 import ShowComment from "./ShowComment";
 import NewRecipe from "./NewRecipe";
 
-function MainContainer({ recipeData, setRecipeData, handleUpdateItem, user }) {
+function MainContainer({ recipeData, setRecipeData, user }) {
 
   const [clicked, setClicked] = useState(false);
 
@@ -37,7 +37,6 @@ function MainContainer({ recipeData, setRecipeData, handleUpdateItem, user }) {
               setRecipeData={setRecipeData}
               clicked={clicked} 
               setClicked={setClicked}
-              handleUpdateItem={handleUpdateItem}
               />}
             />
             <Route exact path='/new-recipe' element= {

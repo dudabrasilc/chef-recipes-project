@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import EditComment from './EditComment';
-import Video from './Video';
 import { Link } from 'react-router-dom';
 
 export default function CommentItem({ id, selectedRecipe, commentRecipe, comment, handleDeleteComment, handleUpdateComment, handleShowComment }) {
@@ -49,7 +48,7 @@ export default function CommentItem({ id, selectedRecipe, commentRecipe, comment
            <h3 className="comment">
             <p className="error">{ canDelete ? "" : "Not allowed to delete" }</p>
             <Link to={`/video/${commentRecipe.id}`}>
-              <img id="img-comment" src={commentRecipe.image}></img>
+              <img id="img-comment" alt="recipe-img" src={commentRecipe.image}></img>
             </Link>
             <p>{description.substring(0,25)}...</p>
            <p className="username">- Chef {user.username}</p>

@@ -3,23 +3,16 @@ import "./styles";
 
 import { Link, useParams } from 'react-router-dom';
 import YoutubeEmbed from "./YoutubeEmbed";
-import CommentList from "./CommentList";
 
 export default function Video({ recipeData, user }) {
 
-  const {title, image, chef, description, video} = recipeData
-
   let {id} = useParams()
-
-  console.log(id)
   
   const matchedRecipe = recipeData.filter(recipe => {
     return Number(recipe.id) === Number(id)
   })
 
-  // console.log(matchedRecipe)
   let recipe = matchedRecipe[0]
-  // console.log(recipe)
 
   return (
     <>

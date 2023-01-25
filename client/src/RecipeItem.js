@@ -1,29 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function RecipeItem({ recipe, handleUpdateItem, handleFindVideoData }) {
+export default function RecipeItem({ recipe }) {
 
-  const { id, title, image, category, description, is_favorited: isFavorited } = recipe;
+  const { id, title, image, category, description } = recipe;
 
-  const [isAuthorized, setIsAuthorized] = useState(true)
- 
-
-  function handleClick(e) {
-    e.preventDefault();
-
-    fetch(`http://localhost:4000/recipes/${id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ is_favorited: !isFavorited }),
-    })
-      .then((r) => r.json())
-      .then((updatedItem) => handleUpdateItem(updatedItem))
-  }
-
-
-  // console.log(recipe)
   const summary = description.substring(0, 50)
   
 

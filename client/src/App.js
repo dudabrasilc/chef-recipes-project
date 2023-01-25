@@ -10,7 +10,6 @@ function App() {
 
   const [user, setUser] = useState(null);
   const [recipeData, setRecipeData] = useState([]);
-  const [videoData, setVideoData] = useState([]);
   
   
     useEffect(() => {
@@ -31,18 +30,7 @@ function App() {
     setUser(null);
   }
 
-  function handleUpdateItem(updatedItemObj) {
-    const editedItems = recipeData.map((item) => {
-      if (item.id === updatedItemObj.id) {
-        return updatedItemObj;
-      } else {
-        return item;
-      }
-    });
-    setRecipeData(editedItems);
-  }
-
-  if (!user) return <Login onLogin={setUser} />;
+  if (!user) return <Login onLogin={setUser} />
 
   return (
     <>
@@ -53,7 +41,6 @@ function App() {
             <MainContainer 
               recipeData={recipeData} 
               setRecipeData={setRecipeData}
-              handleUpdateItem={handleUpdateItem}
               user={user}
               />}/>    
         </Routes>

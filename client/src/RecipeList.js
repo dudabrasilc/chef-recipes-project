@@ -3,40 +3,11 @@ import RecipeItem from './RecipeItem';
 
 export default function RecipeList({ recipeData,  setRecipeData, clicked, setClicked, handleUpdateItem, handleFindVideoData, handleFindId }) {
 
-  // const [dataIndex, setDataIndex] = useState(0)
-  
-
-  // const recipeItems = [...recipeData]
-  //   .slice(dataIndex, dataIndex + 3)
-
-  // if (!recipeData) {
-  //   return "Loading"
-  // } else {
-  //   const recipeItems = recipeData
-  //   .map((recipe) => 
-  //   <RecipeItem 
-  //     key={recipe.id}
-  //     recipe={recipe}
-  //     handleUpdateItem={handleUpdateItem}
-  //     clicked={clicked}
-  //     setClicked={setClicked}
-  //     handleFindVideoData={handleFindVideoData}
-  //     handleFindId={handleFindId}
-  //   />
-  // )
-
-  // function handleClickMore() {
-  //   setDataIndex((dataIndex) => (dataIndex + 3) % recipeData.length);
-  // }
-  // function handleClickLess() {
-  //   setDataIndex((dataIndex) => (dataIndex - 3) % recipeData.length);
-  // }
-  
   return (
     <>
     <div className="comment-page-title">
-      <h3 className="recipe-list-header">Our signature recipe selection, in the comfort of your home.</h3>
-      <h5>Share recipes, browse and leave your feedback!</h5>
+      <h3 className="recipe-list-header">A community that reunites chefs, with the finest recipes.</h3>
+      <h5>Share, browse and leave your comment!</h5>
     </div>
     <div className="comment-page-intro">
       <p></p>

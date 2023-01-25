@@ -6,8 +6,7 @@ function NewRecipe({ recipeData, setRecipeData, addRecipe }) {
     image: "",
     chef: "",
     description: "",
-    video: "",
-    is_favorited: ""
+    video: ""
   })
   const [recipeSubmitted, setRecipeSubmitted] = useState("")
   const [checkRecipe, setCheckRecipe] = useState("")
@@ -35,26 +34,13 @@ function NewRecipe({ recipeData, setRecipeData, addRecipe }) {
         image: "",
         chef: "",
         description: "",
-        video: "",
-        is_favorited: ""
+        video: ""
       })
       addRecipe(newRecipe)
       setRecipeSubmitted("Your recipe was added successfully!")
       setCheckRecipe("To check it, navigate to the Home page.")
     })  
   }
-
-  // const driversList = drivers.map(driver => {
-  //   return (
-  //     <option key={driver.id} name="driver_id" value={driver.id}>{driver.name}</option>
-  //   )
-  // })
-
-  // const trucksList = trucks.map(truck => {
-  //   return (
-  //     <option key={truck.id} name="truck_id" value={truck.id}>{truck.truck_color} {truck.truck_model}</option>
-  //   )
-  // })
     
   return (
 
@@ -68,12 +54,7 @@ function NewRecipe({ recipeData, setRecipeData, addRecipe }) {
         <input type="text" name="image" placeholder="Image URL" value={formData.image} onChange={handleChange}/>
         <input type="text" name="chef" placeholder="Chef" value={formData.chef} onChange={handleChange}/>
         <input type="text" name="description" placeholder="Description" value={formData.description} onChange={handleChange}/>
-        <input type="text" name="video" placeholder="Video URL" value={formData.video} onChange={handleChange}/>
-        <select value={formData.is_favorited} name="is_favorited" onChange={handleChange}>
-          <option value="none">Mark as favorite</option>
-          <option value={true} name="yes">Yes</option>
-          <option value={false} name="no">No</option>
-        </select>
+        <input type="text" name="video" placeholder="Video URL (embeded)" value={formData.video} onChange={handleChange}/>
         <br></br>
         <button id="button" type="submit">Submit</button>
         <br></br>

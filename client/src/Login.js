@@ -12,7 +12,7 @@ function Login({ onLogin }) {
     <div className="login-form">
     <Wrapper>
       <Logo>Chef Recipes</Logo>
-      <h2 className="tagline">Recipes from the most renowned chefs around the world, to the comfort of your home.</h2>
+      <h2 className="tagline">A community for chefs. Share your recipes with the most renowned chefs around the world.</h2>
       {showLogin ? (
         <>
           <LoginForm onLogin={onLogin} />

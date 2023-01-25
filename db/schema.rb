@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 2023_01_17_102221) do
     t.string "image"
     t.string "chef"
     t.string "description"
-    t.boolean "is_favorited", default: true, null: false
     t.string "video"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

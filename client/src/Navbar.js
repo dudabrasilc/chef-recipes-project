@@ -11,11 +11,13 @@ export default function Navbar({ user, setUser }) {
     });
   }
 
+  let chefName = user.username[0].toUpperCase() + user.username.slice(1)
+
   return (
       <>
          <div className="header-background">
             <div>
-            <p className="welcome">Welcome, {user.username}!</p>
+            <p className="welcome">Welcome, Chef {chefName}!</p>
             <button onClick={handleLogoutClick} className="logout-button">Logout</button>
             </div>            
             <Link exact to="/comments" className="nav-button"> Comments </Link>

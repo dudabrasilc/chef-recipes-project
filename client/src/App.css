@@ -250,7 +250,7 @@
   margin-bottom: 5%;
   padding: 7px;
   border: none;
-  background-color: #5e1403;
+  background-color: #151515;
   color: white;
   font-weight: bold;
   border-radius: 15px;
@@ -305,24 +305,24 @@
 }
 
 .video-title {
-  color: #5e1703;
+  color: #151515;
   padding-left: 15%;
-  padding-top: 10%;
+  padding-top: 5%;
   padding-right: 15%;
   margin: 0;
 
 }
 
 .video-category {
-  color: #5e2103;
+  color: #151515;
   text-align: center;
 }
 
 .video-description {
-  color: #5e1803;
+  color: #151515;
   padding-left: 15%;
   padding-right: 15%;
-  /* padding-bottom: 15%; */
+  padding-bottom: 5%;
 }
 
 /* comment page */
@@ -365,6 +365,7 @@
   height: 120px;
   width: 140px;
   border-radius: 8px;
+  padding-top: 20px;
   
 }
 
@@ -383,9 +384,8 @@
   text-shadow: 1px 1px 0px white;
   border-radius: 15px;
   padding: 15px;
-  padding-bottom: 0px;
   text-align: center;
-  height: 320px;
+  height: 340px;
   width: 400px;
   box-shadow: 5px 5px #BBBBBB;
   transition: .7s;
@@ -474,9 +474,9 @@
 }
 
 .edit-comment-input{
-  background-color: rgb(255, 214, 194);
-  color: 03045e;
-  text-shadow: 1px 1px 0px #ffffff;
+  background-color: #151515;
+  color: white;
+  text-shadow: 1px 1px 0px white;
   border-radius: 15px;
   padding: 20px;
   border: none;
@@ -488,7 +488,7 @@
 }
 
 .edit-comment-input:hover{
-  box-shadow: 0px 0px 10px #d88900;
+  box-shadow: 0px 0px 10px grey;
 }
 
 .edit-comment {
@@ -501,12 +501,12 @@
   font-size: 20px;
   text-align: center;
   padding-bottom: 10px;
-  color: #5e1203;
+  color: #151515;
 }
 
 .save-button {
-  color:#edfafd;
-  background-color: #b66a00;
+  color: white;
+  background-color: #151515;
   border-radius: 50px;
   border: none;
   font-size: 20px;
@@ -516,9 +516,9 @@
   padding: 10px
 }
 .save-button:hover{
-  background-color:#edfafd;
-  color: #b64000;
-  box-shadow: 0px 0px 5px #5e1a03;
+  background-color: white;
+  color: #151515;
+  box-shadow: 0px 0px 5px #151515;
 }
 
 .create-comment{

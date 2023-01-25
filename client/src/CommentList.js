@@ -28,12 +28,6 @@ function CommentList({ user, recipeData }) {
         .then((comments) => { setCommentData(comments) });
     }, []);
 
-    // const findRecipe = recipeData.filter(recipe => {
-    //   return recipe.recipe_id === recip.recipe_id
-    // })
-
-    // console.log(findRecipe)
-
     function addNewComment(newComment){
         setCommentData((comments) => [...comments, newComment])
       }
@@ -92,6 +86,7 @@ function CommentList({ user, recipeData }) {
               id={comment.id}
               comment={comment}
               commentRecipe={comment.recipe}
+              selectedRecipe={formData.recipe_id}
               handleDeleteComment={handleDeleteComment} 
               handleUpdateComment={handleUpdateComment}
             />

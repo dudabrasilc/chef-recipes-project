@@ -3,12 +3,12 @@ import EditComment from './EditComment';
 import Video from './Video';
 import { Link } from 'react-router-dom';
 
-export default function CommentItem({ id, commentRecipe, comment, handleDeleteComment, handleUpdateComment, handleShowComment }) {
+export default function CommentItem({ id, selectedRecipe, commentRecipe, comment, handleDeleteComment, handleUpdateComment, handleShowComment }) {
 
   const [isEditing, setIsEditing] = useState(false);
   const [canDelete, setCanDelete] = useState(true)
   
-  console.log(commentRecipe)
+  console.log(commentRecipe.id)
 
   const { description, user } = comment
 
@@ -48,11 +48,11 @@ export default function CommentItem({ id, commentRecipe, comment, handleDeleteCo
             <br/>
            <h3 className="comment">
             <p className="error">{ canDelete ? "" : "Not allowed to delete" }</p>
-            <Link to={`/video/${id}`}>
+            <Link to={`/video/${commentRecipe.id}`}>
               <img id="img-comment" src={commentRecipe.image}></img>
             </Link>
             <p>{description.substring(0,25)}...</p>
-           <p className="username">- {user.username}</p>
+           <p className="username">- Chef {user.username}</p>
            <Link className="full-comment-button" to={`/comments/${id}`}>Full Comment</Link>
            </h3>
         </div>

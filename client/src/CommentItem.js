@@ -7,7 +7,7 @@ export default function CommentItem({ id, selectedRecipe, commentRecipe, comment
   const [isEditing, setIsEditing] = useState(false);
   const [canDelete, setCanDelete] = useState(true)
   
-  console.log(commentRecipe.id)
+  // console.log(commentRecipe.id)
 
   const { description, user } = comment
 

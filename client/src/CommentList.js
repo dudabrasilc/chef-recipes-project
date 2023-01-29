@@ -12,8 +12,8 @@ function CommentList({ user, recipeData }) {
     })
     const [canSubmit, setCanSubmit] = useState(true)
 
-    console.log(user)
-    console.log(formData)
+    // console.log(user)
+    // console.log(formData)
 
     // map through recipeData array to return option tags
     const titles = recipeData.map(recipe => {
@@ -103,7 +103,6 @@ function CommentList({ user, recipeData }) {
     if (!recipeData) {
       return "Loading.."
     } else {
-
       return (
         <>
         <div className="comment-page-title">

@@ -1,11 +1,12 @@
 import React from 'react';
 import RecipeItem from './RecipeItem';
 
-export default function RecipeList({ recipeData,  setRecipeData, clicked, setClicked, handleUpdateItem, handleFindVideoData, handleFindId }) {
+export default function RecipeList({ recipeData,  setRecipeData }) {
+
+  console.log(recipeData)
 
   const recipes = recipeData
     .map((recipe) => {
-
       return (
 <RecipeItem 
       key={recipe.id}

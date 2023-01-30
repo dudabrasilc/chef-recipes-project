@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button, Error, Input, FormField, Label } from "./styles";
 
 export default function LoginForm({ onLogin }) {
@@ -6,6 +7,7 @@ export default function LoginForm({ onLogin }) {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate()
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -20,7 +22,10 @@ export default function LoginForm({ onLogin }) {
       .then((r) => {
         setIsLoading(false);
       if (r.ok) {
-        r.json().then((user) => onLogin(user));
+        r.json().then((user) => {
+          onLogin(user)
+          navigate("/recipes")
+        })
       } else {
         r.json().then((err) => {
           console.log(err)

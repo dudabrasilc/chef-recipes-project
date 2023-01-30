@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
 
-
     def index 
         comments = Comment.all
         render json: comments, status: :ok
@@ -21,14 +20,12 @@ class CommentsController < ApplicationController
         end
     end
 
-    def create 
-        # byebug
+    def create
         comment = Comment.create!(comment_params)
         render json: comment, status: :created
     end
 
     def destroy 
-        # byebug
         comment = find_comment
         if comment[:user_id] == session[:user_id]
             comment.destroy

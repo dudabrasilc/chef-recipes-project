@@ -22,7 +22,7 @@ export default function Navbar({ user, setUser }) {
             </div>            
             <Link exact to="/comments" className="nav-button"> Comments </Link>
             <Link exact to="/new-recipe" className="nav-button">New Recipe</Link>
-            <Link exact to="*" className="nav-button"> Home </Link>
+            <Link exact to="/recipes" className="nav-button"> Home </Link>
         </div>
     </>
   )

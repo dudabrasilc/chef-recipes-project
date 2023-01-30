@@ -31,7 +31,7 @@ function MainContainer({ recipeData, setRecipeData, user }) {
                <ShowComment />
              }
              />
-          <Route exact path="*" element={
+          <Route exact path="/recipes" element={
             <RecipeList 
               recipeData={recipeData}
               setRecipeData={setRecipeData}

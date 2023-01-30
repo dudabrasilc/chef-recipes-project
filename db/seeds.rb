@@ -41,27 +41,27 @@ recipe9 = Recipe.create(title: "Cacio e Pepe", image: "https://i.pinimg.com/564x
 
 puts "✍🏻🗒️ Seeding comments..."
 
-comment1 = Comment.create(description: "I really like making this plate. I'd recommend to not add salt to the meat until it is sealed.", user_id: 2, recipe_id: recipe1.id)
+comment1 = Comment.create(description: "I really like making this plate. I'd recommend to not add salt to the meat until it is sealed.", user_id: 1, recipe_id: recipe1.id)
 
 comment2 = Comment.create(description: "Impressed by the skills of this chef. It taught me a lot!", user_id: 2, recipe_id: recipe2.id)
 
-comment3 = Comment.create(description: "An exotic and artistic dish, Michelin Star!!", user_id: 2, recipe_id: recipe3.id)
+comment3 = Comment.create(description: "An exotic and artistic dish, Michelin Star!!", user_id: 3, recipe_id: recipe3.id)
 
-comment4 = Comment.create(description: "I love this one. Definitely a new face to the chicken breasts! But I wouldn't serve it at a restaurant.", user_id: 2, recipe_id: recipe4.id)
+comment4 = Comment.create(description: "I love this one. Definitely a new face to the chicken breasts! But I wouldn't serve it at a restaurant.", user_id: 4, recipe_id: recipe4.id)
 
-comment5 = Comment.create(description: "I have always watched your videos and they always inspire me to adapt popular dishes.", user_id: 3, recipe_id: recipe5.id)
+comment5 = Comment.create(description: "I have always watched your videos and they always inspire me to adapt popular dishes.", user_id: 5, recipe_id: recipe5.id)
 
-comment6 = Comment.create(description: "I would say this is one of the best recipes I have seem for this dish. I already made it and it's nothing compared to what I have tried so far. Good job.", user_id: 3, recipe_id: recipe6.id)
+comment6 = Comment.create(description: "I would say this is one of the best recipes I have seem for this dish. I already made it and it's nothing compared to what I have tried so far. Good job.", user_id: 6, recipe_id: recipe6.id)
 
-comment7 = Comment.create(description: "Simple and delicious. I would like to see more videos of your recipes, talented chef.", user_id: 4, recipe_id: recipe7.id)
+comment7 = Comment.create(description: "Simple and delicious. I would like to see more videos of your recipes, talented chef.", user_id: 7, recipe_id: recipe7.id)
 
-comment8 = Comment.create(description: "It's not easy to make dishes from different cullinaires when you don't have experience with them. I'd try making this one.", user_id: 4, recipe_id: recipe8.id)
+comment8 = Comment.create(description: "It's not easy to make dishes from different cullinaires when you don't have experience with them. I'd try making this one.", user_id: 8, recipe_id: recipe8.id)
 
-comment9 = Comment.create(description: "Amazing recipe. However I have a suggestion: you could make your own past with only eggs to add.", user_id: 5, recipe_id: recipe9.id)
+comment9 = Comment.create(description: "Amazing recipe. However I have a suggestion: you could make your own past with only eggs to add.", user_id: 1, recipe_id: recipe9.id)
 
-comment10 = Comment.create(description: "Fine plate and well presentable!", user_id: 5, recipe_id: recipe3.id)
+comment10 = Comment.create(description: "Fine plate and well presentable!", user_id: 2, recipe_id: recipe3.id)
 
-comment11 = Comment.create(description: "This chef has so much talent, making everyday dishes always tasty.", user_id: 6, recipe_id: recipe2.id)
+comment11 = Comment.create(description: "This chef has so much talent, making everyday dishes always tasty.", user_id: 3, recipe_id: recipe2.id)
 
 
 puts "✅ Done seeding!"

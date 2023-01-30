@@ -13,18 +13,16 @@ function App() {
   
   
     useEffect(() => {
-      fetch("http://localhost:4000/me").then((response) => {
+      fetch("/me").then((response) => {
         if (response.ok) {
           response.json().then((user) => setUser(user));
         }
       });
-    }, []);
-
-    useEffect(() => {
-      fetch("http://localhost:4000/recipes")
+      fetch("/recipes")
         .then((r) => r.json())
         .then((recipe) => {setRecipeData(recipe)});
     }, []);
+
 
   function handleLogout() {
     setUser(null);
@@ -37,7 +35,7 @@ function App() {
     <div className="App">
       <Header user={user} setUser={setUser} onLogout={handleLogout} />
       <Routes>
-          <Route exact path="*" element={
+          <Route path="*" element={
             <MainContainer 
               recipeData={recipeData} 
               setRecipeData={setRecipeData}

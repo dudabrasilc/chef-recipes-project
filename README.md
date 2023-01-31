@@ -53,32 +53,32 @@ npm start
 
 
 ## Database Tables: recipes, comments and users
-<img alt="db tables" src="./db-tables.png"/>
+<img alt="db tables" src="./gifs-images/db-tables.png"/>
 
 
 ## Usage
 
-With this application, a chef is able to sign up and have its information saved for future login.
+In this application, a chef (user) is able to sign up and have its information saved for future login.
 
 ### Logging in
 Once the application is loaded, a form will be displayed along with a brief description of the webpage. Users are able to create an account and login:
 
-<!-- ADD GIFFFFFFFFFFFF -->
+![](./gifs-images/logging-in.gif)
 
 ### Interacting with the recipes
 Once redirected to the home page, a user is able to browse a list of recipes from other chefs. Clicking on the play button of a recipe, loads a page with a video and information about the recipe:
 
-<!-- ADD GIFFFFFFFFFFFF -->
+![](./gifs-images/recipes-list.gif)
 
 ### Adding a recipe
 In the Navbar, you can find the 'New Recipe' link to open a form so a user can submit recipes. The form is helpful on the way that it makes sure that all the input fields are validated before creating a new recipe:
 
-<!-- ADD GIFFFFFFFFFFFF -->
+![](./gifs-images/new-recipe.gif)
 
 ### Adding, editing and removing a comment
 Also in the Navbar, the user is able to navigate to the Comments section. There, you can add, edit and remove a comment (editing and removing a comment should be only able to work if the comment belongs to the user that is logged in).
 
-<!-- ADD GIFFFFFFFFFFFF -->
+![](./gifs-images/new-comment.gif)
 
 
 ## Support

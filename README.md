@@ -1,5 +1,7 @@
 # Chef Recipes
 
+![](https://visitor-badge.glitch.me/badge?page_id=puneethreddyhc.onlineadv)
+
 ## Description
 
 This application allows culinary chefs to join other chefs from all over the world. With the application, a chef is able to sign up and login in order to be a member of the community, sharing, leaving feedbacks and uploading new recipes.
@@ -50,7 +52,7 @@ npm start
 
 
 # Database Tables: recipes, comments and users
-<img alt="db tables" src="./db-tables"/>
+<img alt="db tables" src="./db-tables.png"/>
 
 
 # Usage

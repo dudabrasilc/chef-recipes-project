@@ -17,7 +17,7 @@ https://www.youtube.com/watch?v=aH9A6q8cYCk
 ## Getting Started
 Follow the steps below to set up both front-end and back-end code.
 
-### chef-recipes-project directory
+### chef-recipes-project directory (back-end)
 
 - Install gems from Gemfile for backend
 
@@ -37,7 +37,7 @@ bundle install
 rails server
   ```
 
-### chef-recipes-project/client/ directory
+### chef-recipes-project/client/ directory (front-end)
 
 - Install dependencies  
 
@@ -65,21 +65,28 @@ Once the application is loaded, a form will be displayed along with a brief desc
 
 ![](./gifs-images/logging-in.gif)
 
+<br/>
+
 ### Interacting with the recipes
 Once redirected to the home page, a user is able to browse a list of recipes from other chefs. Clicking on the play button of a recipe, loads a page with a video and information about the recipe:
 
 ![](./gifs-images/recipes-list.gif)
+
+<br/>
 
 ### Adding a recipe
 In the Navbar, you can find the 'New Recipe' link to open a form so a user can submit recipes. The form is helpful on the way that it makes sure that all the input fields are validated before creating a new recipe:
 
 ![](./gifs-images/new-recipe.gif)
 
+<br/>
+
 ### Adding, editing and removing a comment
 Also in the Navbar, the user is able to navigate to the Comments section. There, you can add, edit and remove a comment (editing and removing a comment should be only able to work if the comment belongs to the user that is logged in).
 
 ![](./gifs-images/new-comment.gif)
 
+<br/>
 
 ## Support
 For any questions related to the project's functionality, code, or usage, please reach out to:

@@ -7,15 +7,22 @@
 ## Built with:
 <img alt="html5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> <img alt="Css" src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" /> <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" /> <img alt="React" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img alt="Ruby" src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white" /> <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" /> <img alt="Rails" src="https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white" />  
 
+<br/>
+
 ## Description
-This application allows culinary chefs to join other chefs from all over the world. With the application, a chef is able to sign up and login in order to be a member of the community, sharing, leaving feedbacks and uploading new recipes.  
+This application allows culinary chefs to join other chefs from all over the world. With the application, a chef is able to sign up and login in order to be a member of the community, sharing, leaving feedbacks and uploading new recipes.
+
+<br/>
 
 ## Walk-through video:
 https://www.youtube.com/watch?v=aH9A6q8cYCk  
 
+<br/>
 
 ## Getting Started
 Follow the steps below to set up both front-end and back-end code.
+
+<br/>
 
 ### chef-recipes-project directory (back-end)
 
@@ -37,6 +44,8 @@ bundle install
 rails server
   ```
 
+<br/>
+
 ### chef-recipes-project/client/ directory (front-end)
 
 - Install dependencies  
@@ -51,14 +60,18 @@ npm install
 npm start
   ```
 
+<br/>
 
 ## Database Tables: recipes, comments and users
 <img alt="db tables" src="./gifs-images/db-tables.png"/>
 
+<br/>
 
 ## Usage
 
 In this application, a chef (user) is able to sign up and have its information saved for future login.
+
+<br/>
 
 * ### Logging in
 Once the application is loaded, a form will be displayed along with a brief description of the webpage. Users are able to create an account and login:

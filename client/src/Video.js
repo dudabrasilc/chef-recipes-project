@@ -17,7 +17,7 @@ export default function Video({ recipeData, user }) {
   return (
     <>
     <div className="video-container">
-      <Link to="*" className="literally-back-button">Back</Link>
+      <Link to="/recipes" className="literally-back-button">Back</Link>
       <YoutubeEmbed videoData={recipe.video} />
       <h2 className="video-title" >{recipe.title}</h2>
       <h5 className="video-category">{recipe.chef}</h5>
